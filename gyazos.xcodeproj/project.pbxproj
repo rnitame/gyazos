@@ -15,6 +15,7 @@
 		8A4494301E48C09E009E6959 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A44942E1E48C09E009E6959 /* LaunchScreen.storyboard */; };
 		8A44943B1E48C09F009E6959 /* gyazosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A44943A1E48C09F009E6959 /* gyazosTests.swift */; };
 		8A4494461E48C09F009E6959 /* gyazosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4494451E48C09F009E6959 /* gyazosUITests.swift */; };
+		8AF9BFF81E48D1FD0036E4A1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9BFF71E48D1FD0036E4A1 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8A4494411E48C09F009E6959 /* gyazosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gyazosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4494451E48C09F009E6959 /* gyazosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gyazosUITests.swift; sourceTree = "<group>"; };
 		8A4494471E48C09F009E6959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AF9BFF71E48D1FD0036E4A1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		8A4494161E48C09E009E6959 = {
 			isa = PBXGroup;
 			children = (
+				8AF9BFF71E48D1FD0036E4A1 /* README.md */,
 				8A4494211E48C09E009E6959 /* gyazos */,
 				8A4494391E48C09F009E6959 /* gyazosTests */,
 				8A4494441E48C09F009E6959 /* gyazosUITests */,
@@ -267,6 +270,7 @@
 			files = (
 				8A44942B1E48C09E009E6959 /* gyazos.xcdatamodeld in Sources */,
 				8A4494251E48C09E009E6959 /* ViewController.swift in Sources */,
+				8AF9BFF81E48D1FD0036E4A1 /* README.md in Sources */,
 				8A4494231E48C09E009E6959 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,6 +520,7 @@
 				8A44944C1E48C09F009E6959 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A44944D1E48C09F009E6959 /* Build configuration list for PBXNativeTarget "gyazosTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +529,7 @@
 				8A44944F1E48C09F009E6959 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A4494501E48C09F009E6959 /* Build configuration list for PBXNativeTarget "gyazosUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +538,7 @@
 				8A4494521E48C09F009E6959 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
