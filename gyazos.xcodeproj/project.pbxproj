@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		8A2EEC531E536B6000E9A867 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2EEC511E536B6000E9A867 /* Alamofire.framework */; };
 		8A2EEC541E536B6000E9A867 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2EEC521E536B6000E9A867 /* SwiftyJSON.framework */; };
+		8A2EEC571E536C2D00E9A867 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2EEC561E536C2D00E9A867 /* ViewController.swift */; };
 		8A4494231E48C09E009E6959 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4494221E48C09E009E6959 /* AppDelegate.swift */; };
-		8A4494251E48C09E009E6959 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4494241E48C09E009E6959 /* ViewController.swift */; };
 		8A4494281E48C09E009E6959 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A4494261E48C09E009E6959 /* Main.storyboard */; };
 		8A44942B1E48C09E009E6959 /* gyazos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A4494291E48C09E009E6959 /* gyazos.xcdatamodeld */; };
 		8A44942D1E48C09E009E6959 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A44942C1E48C09E009E6959 /* Assets.xcassets */; };
@@ -40,9 +40,9 @@
 /* Begin PBXFileReference section */
 		8A2EEC511E536B6000E9A867 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		8A2EEC521E536B6000E9A867 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		8A2EEC561E536C2D00E9A867 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8A44941F1E48C09E009E6959 /* gyazos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gyazos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4494221E48C09E009E6959 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8A4494241E48C09E009E6959 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8A4494271E48C09E009E6959 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A44942A1E48C09E009E6959 /* gyazos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = gyazos.xcdatamodel; sourceTree = "<group>"; };
 		8A44942C1E48C09E009E6959 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,12 +119,12 @@
 			isa = PBXGroup;
 			children = (
 				8A4494221E48C09E009E6959 /* AppDelegate.swift */,
-				8A4494241E48C09E009E6959 /* ViewController.swift */,
 				8A4494261E48C09E009E6959 /* Main.storyboard */,
 				8A44942C1E48C09E009E6959 /* Assets.xcassets */,
 				8A44942E1E48C09E009E6959 /* LaunchScreen.storyboard */,
 				8A4494311E48C09E009E6959 /* Info.plist */,
 				8A4494291E48C09E009E6959 /* gyazos.xcdatamodeld */,
+				8A2EEC561E536C2D00E9A867 /* ViewController.swift */,
 			);
 			path = gyazos;
 			sourceTree = "<group>";
@@ -304,8 +304,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A44942B1E48C09E009E6959 /* gyazos.xcdatamodeld in Sources */,
-				8A4494251E48C09E009E6959 /* ViewController.swift in Sources */,
 				8AF9BFF81E48D1FD0036E4A1 /* README.md in Sources */,
+				8A2EEC571E536C2D00E9A867 /* ViewController.swift in Sources */,
 				8A4494231E48C09E009E6959 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
