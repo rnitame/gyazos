@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nmn-40-fLk">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--gyazos-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="gyazos" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,15 +18,42 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fnx-mj-lzf">
+                                <rect key="frame" x="75" y="261" width="171" height="46"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bIL-lR-Nxx">
+                                        <rect key="frame" x="0.0" y="0.0" width="171" height="46"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2s-7q-KGz">
+                                                <rect key="frame" x="0.0" y="0.0" width="171" height="46"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="Select Picture"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="j2s-7q-KGz" firstAttribute="centerX" secondItem="bIL-lR-Nxx" secondAttribute="centerX" id="ERR-EY-ipD"/>
+                                            <constraint firstItem="j2s-7q-KGz" firstAttribute="centerY" secondItem="bIL-lR-Nxx" secondAttribute="centerY" constant="1" id="FZK-fp-KM6"/>
+                                            <constraint firstItem="j2s-7q-KGz" firstAttribute="centerY" secondItem="bIL-lR-Nxx" secondAttribute="centerY" id="Yzd-mU-Hpb"/>
+                                            <constraint firstItem="j2s-7q-KGz" firstAttribute="centerX" secondItem="bIL-lR-Nxx" secondAttribute="centerX" constant="1" id="gKV-Ew-hyH"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fnx-mj-lzf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2tm-5s-jlB"/>
+                            <constraint firstItem="fnx-mj-lzf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M1T-CW-1d2"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Xku-vH-3vW"/>
+                    <navigationItem key="navigationItem" title="gyazos" id="Xku-vH-3vW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1006" y="692"/>
+            <point key="canvasLocation" x="1005.6" y="691.304347826087"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8k2-Uh-eMH">

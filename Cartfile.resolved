@@ -1,2 +1,3 @@
 github "Alamofire/Alamofire" "4.3.0"
+github "TakeScoop/SwiftyButton" "0.6.0"
 github "SwiftyJSON/SwiftyJSON" "3.1.4"
