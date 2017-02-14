@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A2EEC531E536B6000E9A867 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2EEC511E536B6000E9A867 /* Alamofire.framework */; };
+		8A2EEC541E536B6000E9A867 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2EEC521E536B6000E9A867 /* SwiftyJSON.framework */; };
 		8A4494231E48C09E009E6959 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4494221E48C09E009E6959 /* AppDelegate.swift */; };
 		8A4494251E48C09E009E6959 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4494241E48C09E009E6959 /* ViewController.swift */; };
 		8A4494281E48C09E009E6959 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A4494261E48C09E009E6959 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A2EEC511E536B6000E9A867 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		8A2EEC521E536B6000E9A867 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		8A44941F1E48C09E009E6959 /* gyazos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gyazos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4494221E48C09E009E6959 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A4494241E48C09E009E6959 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A2EEC531E536B6000E9A867 /* Alamofire.framework in Frameworks */,
+				8A2EEC541E536B6000E9A867 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A2EEC501E536B6000E9A867 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A2EEC511E536B6000E9A867 /* Alamofire.framework */,
+				8A2EEC521E536B6000E9A867 /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8A4494161E48C09E009E6959 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +101,7 @@
 				8A4494391E48C09F009E6959 /* gyazosTests */,
 				8A4494441E48C09F009E6959 /* gyazosUITests */,
 				8A4494201E48C09E009E6959 /* Products */,
+				8A2EEC501E536B6000E9A867 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +157,7 @@
 				8A44941B1E48C09E009E6959 /* Sources */,
 				8A44941C1E48C09E009E6959 /* Frameworks */,
 				8A44941D1E48C09E009E6959 /* Resources */,
+				8A2EEC551E536B7B00E9A867 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -262,6 +279,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8A2EEC551E536B7B00E9A867 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A44941B1E48C09E009E6959 /* Sources */ = {
@@ -422,6 +457,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8862RCYMMJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = gyazos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.rnita.ios.gyazos;
@@ -435,6 +474,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8862RCYMMJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = gyazos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.rnita.ios.gyazos;
