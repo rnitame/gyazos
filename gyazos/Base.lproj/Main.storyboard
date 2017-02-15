@@ -31,6 +31,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="171" height="46"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <state key="normal" title="Select Picture"/>
+                                                <connections>
+                                                    <action selector="selectImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RVA-ui-shp"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -50,6 +53,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="gyazos" id="Xku-vH-3vW"/>
+                    <connections>
+                        <outlet property="selectImageButton" destination="j2s-7q-KGz" id="T0o-Ln-tr4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

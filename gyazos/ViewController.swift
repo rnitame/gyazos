@@ -9,11 +9,23 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBOutlet var selectImageButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // uploadImage()
+    }
+    
+    @IBAction func selectImage(_ sendar: AnyObject) {
+        let sourceType: UIImagePickerControllerSourceType = UIImagePickerControllerSourceType.photoLibrary
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary){
+            let imagePicker = UIImagePickerController()
+            imagePicker.sourceType = sourceType
+            imagePicker.delegate = self
+            self.present(imagePicker, animated: true, completion: nil)
+        }
     }
     
     func uploadImage() {
