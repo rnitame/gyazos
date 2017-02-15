@@ -28,17 +28,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    func uploadImage() {
-        let url = try! URLRequest(
-            url: URL(string: "upload.gyazo.com/upload.cgi")!,
+    func uploadImage(_ selectedImage: UIImage) {
+        let endpoint = try! URLRequest(
+            url: URL(string: "http://upload.gyazo.com/upload.cgi")!,
             method: .post
         )
         let idData: Data! = "".data(using: .utf8)
         Alamofire.upload(
             multipartFormData: { multipartFormData in
                 multipartFormData.append(idData, withName: "id")
+                multipartFormData.append(UIImagePNGRepresentation(selectedImage)!, withName: "imagedata", fileName: "gyazo", mimeType: "image/png")
             },
-            with: url,
+            with: endpoint,
             encodingCompletion: { encodingResult in
                 switch encodingResult {
                 case .success(let upload, _, _):
@@ -50,5 +51,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 }
             }
         )
+    }
+    
+    // 画像が選択された時に呼ばれる
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        uploadImage(selectedImage)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    // 画像選択がキャンセルされた時に呼ばれる
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
