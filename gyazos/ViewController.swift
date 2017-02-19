@@ -43,8 +43,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             encodingCompletion: { encodingResult in
                 switch encodingResult {
                 case .success(let upload, _, _):
-                    upload.responseJSON { response in
-                        debugPrint(response)
+                    upload.responseString { response in
+                        let gyazoUrl = URL(string: response.result.value!)
+                        if (UIApplication.shared.canOpenURL(gyazoUrl!)) {
+                            UIPasteboard.general.url = URL(string: response.result.value!)
+                            UIApplication.shared.open(gyazoUrl!)
+                        }
                     }
                 case .failure(let encodingError):
                     print(encodingError)
