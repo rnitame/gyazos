@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23138454EBA6AB942537B081 /* libPods-gyazos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE57A6F6CE268F43B60FF35 /* libPods-gyazos.a */; };
 		8A2EEC531E536B6000E9A867 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2EEC511E536B6000E9A867 /* Alamofire.framework */; };
 		8A2EEC541E536B6000E9A867 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2EEC521E536B6000E9A867 /* SwiftyJSON.framework */; };
 		8A2EEC571E536C2D00E9A867 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2EEC561E536C2D00E9A867 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46BF20BD900AE65FAAA242B0 /* Pods-gyazos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gyazos.release.xcconfig"; path = "Pods/Target Support Files/Pods-gyazos/Pods-gyazos.release.xcconfig"; sourceTree = "<group>"; };
 		8A2EEC511E536B6000E9A867 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		8A2EEC521E536B6000E9A867 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		8A2EEC561E536C2D00E9A867 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,8 @@
 		8A4494451E48C09F009E6959 /* gyazosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gyazosUITests.swift; sourceTree = "<group>"; };
 		8A4494471E48C09F009E6959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AF9BFF71E48D1FD0036E4A1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D8CBD433EEB3F6B40055FEF6 /* Pods-gyazos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gyazos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gyazos/Pods-gyazos.debug.xcconfig"; sourceTree = "<group>"; };
+		FAE57A6F6CE268F43B60FF35 /* libPods-gyazos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gyazos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			files = (
 				8A2EEC531E536B6000E9A867 /* Alamofire.framework in Frameworks */,
 				8A2EEC541E536B6000E9A867 /* SwiftyJSON.framework in Frameworks */,
+				23138454EBA6AB942537B081 /* libPods-gyazos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,11 +89,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		353416C7A8989EE029570AC8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8CBD433EEB3F6B40055FEF6 /* Pods-gyazos.debug.xcconfig */,
+				46BF20BD900AE65FAAA242B0 /* Pods-gyazos.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8A2EEC501E536B6000E9A867 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				8A2EEC511E536B6000E9A867 /* Alamofire.framework */,
 				8A2EEC521E536B6000E9A867 /* SwiftyJSON.framework */,
+				FAE57A6F6CE268F43B60FF35 /* libPods-gyazos.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -102,6 +117,7 @@
 				8A4494441E48C09F009E6959 /* gyazosUITests */,
 				8A4494201E48C09E009E6959 /* Products */,
 				8A2EEC501E536B6000E9A867 /* Frameworks */,
+				353416C7A8989EE029570AC8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,10 +170,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A44944A1E48C09F009E6959 /* Build configuration list for PBXNativeTarget "gyazos" */;
 			buildPhases = (
+				F3BBE153FB54984A3F6F82C7 /* [CP] Check Pods Manifest.lock */,
 				8A44941B1E48C09E009E6959 /* Sources */,
 				8A44941C1E48C09E009E6959 /* Frameworks */,
 				8A44941D1E48C09E009E6959 /* Resources */,
 				8A2EEC551E536B7B00E9A867 /* ShellScript */,
+				1EAFEFB10AE9BA4D7EED8707 /* [CP] Embed Pods Frameworks */,
+				FB6950E78136D91113BB9AB3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -281,6 +300,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1EAFEFB10AE9BA4D7EED8707 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gyazos/Pods-gyazos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8A2EEC551E536B7B00E9A867 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,6 +330,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		F3BBE153FB54984A3F6F82C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FB6950E78136D91113BB9AB3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gyazos/Pods-gyazos-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -455,6 +519,7 @@
 		};
 		8A44944B1E48C09F009E6959 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8CBD433EEB3F6B40055FEF6 /* Pods-gyazos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8862RCYMMJ;
@@ -472,6 +537,7 @@
 		};
 		8A44944C1E48C09F009E6959 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46BF20BD900AE65FAAA242B0 /* Pods-gyazos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8862RCYMMJ;
