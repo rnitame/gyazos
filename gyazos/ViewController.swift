@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import MBProgressHUD
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet var selectImageButton: UIButton!
@@ -34,6 +35,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             method: .post
         )
         let idData: Data! = "".data(using: .utf8)
+        let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        hud.mode = MBProgressHUDMode.indeterminate
         Alamofire.upload(
             multipartFormData: { multipartFormData in
                 multipartFormData.append(idData, withName: "id")
@@ -48,6 +51,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                         if (UIApplication.shared.canOpenURL(gyazoUrl!)) {
                             UIPasteboard.general.url = URL(string: response.result.value!)
                             UIApplication.shared.open(gyazoUrl!)
+                            hud.hide(animated: true)
                         }
                     }
                 case .failure(let encodingError):
